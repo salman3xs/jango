@@ -25,7 +25,7 @@ def myform(request):
         myform = form.MyForm(request.POST)
         
         if myform.is_valid():
-            #Work
+            # Work
             print("Form Submitted")
             print(myform.cleaned_data['name'])
         
