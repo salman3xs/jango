@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from first_app import form
 from first_app.models import Topic,Webpage,AccessRecord,User
 # Create your views here.
 
@@ -15,4 +16,17 @@ def user(request):
     return render(request, 'first_app/user.html',context=user_dict)
 
 def demo(request):
-    return render(request, 'first_app/Dan/demo (1).html')   
+    return render(request, 'first_app/Dan/demo (1).html')
+
+def myform(request):
+    myform = form.MyForm()
+    
+    if request.method == 'POST':
+        myform = form.MyForm(request.POST)
+        
+        if myform.is_valid():
+            #Work
+            print("Form Submitted")
+            print(myform.cleaned_data['name'])
+        
+    return render(request, 'first_app/form_page.html',{'form':myform})
