@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skulls</title>
+    <link rel="stylesheet" href="{% static "images/demo (1).css" %}">
+</head>
+
+<body>
+    <header>
+        <div class="div">
+            <div id="item1">
+                <img src="{% static "images/1.gif" %}" alt="img" height="80px" width="80px">
+            </div>
+            <div id="item2">
+                <h1> </h1>
+            </div>
+        </div>
+        <marquee behavior="scroll" direction="left" class="notice">Notice:Please collect marksheet</marquee>
+    </header>
+    <!-- <nav>
+        <table border="1">
+            <tr>
+                <th><a href="#">Home</a></th>
+                <th><a href="#">About us</a></th>
+                <th><a href="#">Product</a></th>
+                <th><a href="#">Registration</a></th>
+                <th><a href="#">Contact</a></th>
+            </tr>
+        </table>
+    </nav> -->
+    <nav>
+        <ul>
+            <li><a href="#" class="a">Home</a></li>
+            <li><a href="#" class="a">About us</a></li>
+            <li><a href="#" class="a">Product</a></li>
+            <li><a href="#" class="a">Registration</a></li>
+            <li><a href="#" class="a">Login</a></li>
+            <li><a href="#" class="a">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="item-text">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, minima maxime? Dolorem ipsam,
+                exercitationem repellat quod officia a fugit atque temporibus minima iste suscipit fugiat sequi vitae
+                minus
+                dolores soluta?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nesciunt provident nam voluptatem, velit
+                totam aspernatur est ipsa nemo temporibus sint ratione amet nostrum animi qui ea dolore sapiente
+                voluptate.
+            </p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime velit cupiditate sunt deserunt culpa ut
+                labore! Est, voluptatum delectus vero, dolorem laudantium veniam labore ex ducimus odit doloribus saepe
+                deserunt.</p>
+        </div>
+        <div class="item-img">
+            <img src="{% static "images/skull.gif"%}" alt="img" height="160px" width="200px">
+        </div>    
+    </div>
+    <footer>
+        <h4 align="center"> &#9760;Copyright SSBT College.All rights resvered</h4>
+    </footer>
+
+</body>
+
+</html>

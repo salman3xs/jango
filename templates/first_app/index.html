@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid;
+        }
+        th{
+            border-bottom: 2px solid;
+        }
+        tr{
+            border-right: 2px solid;
+        }
+        .lists{
+            float: left;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello this is index.html!</h1>
+    <div class="lists">
+        <div class="dt">
+            {% if ar%}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                {%for acc in ar %}
+                <tr>
+                    <td>{{acc.name}}</td>
+                    <td>{{acc.date}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            NO Records
+            {% endif %}
+        </div>
+    </div>
+    <a href="/first_app/user/">View User</a>
+    <a href="/first_app/demo/">View Demo</a>
+</body>
+
+</html>
