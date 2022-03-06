@@ -16,7 +16,7 @@ def add_topic():
     t.save()
     return t
 
-def pop(N=5):
+def pop(N=5):                          
     
     for entry in range(N):
         
@@ -45,6 +45,6 @@ def adduser():
         
 if __name__ == '__main__':
     print('populating scrpit!')
-    adduser()
+    pop(200)
     print('pop complte')
             
