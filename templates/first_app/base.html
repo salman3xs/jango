@@ -16,8 +16,11 @@
                 <li><a href="{% url 'first_app:demo'%}">View Demo</a></li>
                 <li><a href="{% url 'first_app:myform'%}">Submit Issue</a></li>
                 <li><a href="{% url 'first_app:myform2'%}">Register</a></li>
-                {% if  %}{% endif %}
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout'%}">logout</a></li>
+                {% else %}
                 <li><a href="{% url 'first_app:login'%}">login</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
