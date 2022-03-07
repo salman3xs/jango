@@ -15,7 +15,9 @@
                 <li><a href="{% url 'first_app:user'%}">View User</a></li>
                 <li><a href="{% url 'first_app:demo'%}">View Demo</a></li>
                 <li><a href="{% url 'first_app:myform'%}">Submit Issue</a></li>
-                <li><a href="{% url 'first_app:myform2'%}">Submit Issue</a></li>
+                <li><a href="{% url 'first_app:myform2'%}">Register</a></li>
+                {% if  %}{% endif %}
+                <li><a href="{% url 'first_app:login'%}">login</a></li>
             </ul>
         </div>
     </nav>
