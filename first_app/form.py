@@ -1,5 +1,6 @@
 from django import forms
 from django.core import validators
+from first_app.models import User
 
 
 def check_name(value):
@@ -23,4 +24,9 @@ class MyForm(forms.Form):
         
         if email != vmail:
             raise forms.ValidationError('message')
-        
+
+class MyForm_Modal(forms.ModelForm):
+    
+    class Meta:
+        model = User
+        fields = '__all__'

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from first_app import form
 from first_app.models import Topic,Webpage,AccessRecord,User
+from first_app.form import MyForm_Modal
 # Create your views here.
 
 def index(request):
@@ -30,3 +31,15 @@ def myform(request):
             print(myform.cleaned_data['name'])
         
     return render(request, 'first_app/form_page.html',{'form':myform})
+
+def myform2(request):
+    form = MyForm_Modal()
+    
+    if request.method == "POST":
+        form = MyForm_Modal(request.POST)
+        
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)
+    
+    return render(request, 'first_app/form_page2.html',{'form':form})
