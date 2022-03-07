@@ -1,6 +1,7 @@
 from django import forms
 from django.core import validators
-from first_app.models import User
+from django.contrib.auth.models import User
+from first_app.models import UserProfileInfo
 
 
 def check_name(value):
@@ -26,7 +27,13 @@ class MyForm(forms.Form):
             raise forms.ValidationError('message')
 
 class MyForm_Modal(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
     
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('username','email','password')
+        
+class UserProfileInfoForm(forms.ModelForm):
+    class Meta():
+        model = UserProfileInfo
+        fields = ('profile_image',)
